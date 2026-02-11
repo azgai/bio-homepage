@@ -1,15 +1,9 @@
-/* -------------------- */
-/* RESET */
-/* -------------------- */
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* -------------------- */
-/* BASE */
-/* -------------------- */
 html {
     scroll-behavior: smooth;
 }
@@ -21,9 +15,7 @@ body {
     line-height: 1.7;
 }
 
-/* -------------------- */
-/* HERO */
-/* -------------------- */
+
 .hero {
     height: 75vh;
     display: flex;
@@ -49,9 +41,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* -------------------- */
-/* EXPLORE CTA */
-/* -------------------- */
+
 .explore-section {
     background-color: #111;
     padding: 80px 20px;
@@ -81,9 +71,7 @@ body {
     font-size: 1.4rem;
 }
 
-/* -------------------- */
-/* HEADER / NAV */
-/* -------------------- */
+
 .site-header {
     max-width: 1000px;
     margin: 70px auto 0;
@@ -126,6 +114,19 @@ body {
     width: 100%;
 }
 
+
+
+.about-card ul,
+.project-card ul,
+.hobbies-list {
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+}
+
+
+
 /* -------------------- */
 /* MAIN SECTIONS */
 /* -------------------- */
@@ -146,9 +147,6 @@ main {
     font-size: 1.9rem;
 }
 
-/* -------------------- */
-/* ABOUT & PROJECT CARDS */
-/* -------------------- */
 .about-cards,
 .projects-cards {
     margin-top: 50px;
@@ -170,17 +168,11 @@ main {
     margin-bottom: 12px;
 }
 
-/* -------------------- */
-/* HOBBIES LIST */
-/* -------------------- */
 .hobbies-list {
     margin-top: 20px;
     list-style: disc inside;
 }
 
-/* -------------------- */
-/* FOOTER */
-/* -------------------- */
 footer {
     border-top: 1px solid #ccc;
     padding: 30px;
@@ -190,9 +182,6 @@ footer {
     background-color: #fff;
 }
 
-/* -------------------- */
-/* RESPONSIVE */
-/* -------------------- */
 @media (max-width: 768px) {
     .hero-text h1 {
         font-size: 2rem;
@@ -207,4 +196,152 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
+}
+
+
+.hover-grow {
+    transition: all 0.3s ease;
+}
+
+.hover-grow:hover {
+    transform: scale(1.1);
+    color:#808080; 
+}
+
+.pop-text span {
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.pop-text span:hover {
+  transform: scale(2) rotate(15deg);
+}
+
+
+.tick-quote {
+    display: inline-block;
+    animation: tick 1s ease-in-out infinite;
+}
+
+@keyframes tick {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(15px); }
+    100% { transform: translateY(0); }
+}
+
+.spaced {
+    display: inline-block;  
+    margin-bottom: 30px;    
+}
+
+
+.neon-text {
+    color: #ffffff;
+    text-shadow:
+        0 0 5px #7b5cff,
+        0 0 10px #5ce1e6,
+        0 0 20px #7b5cff;
+    font-weight: bold;
+}
+
+
+.text-box {
+    background-color: #f0f0f0;  
+    padding: 8px 15px;
+    border-radius: 6px;
+    display: inline-block;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+
+.tag-text {
+    background-color: #222;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-right: 6px;
+    max-width: 200px; 
+    word-wrap: break-word;
+}
+
+
+.gradient-text {
+    background: linear-gradient(45deg, #f5f0f0, #221f20);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+
+.contact-list li {
+    list-style: none;
+    display: inline-block;
+    margin: 8px 6px;
+}
+
+.contact-list a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(145deg, #333, #111);
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-list a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    background: linear-gradient(135deg, #110f0d, #f6eaf0);
+    color: #fff;
+}
+
+.contact-list a span {
+    font-size: 1.2rem;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    padding: 30px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+    background-color: #fff;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid rgba(255,255,255,0.6);
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    animation: floatPic 4s ease-in-out infinite;
+}
+
+@keyframes floatPic {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
 }
